@@ -2,41 +2,62 @@ Gauthier Huguenin - Personal Portfolio 🚀
 
 "L'interface humaine entre le business et l'IA."
 
-Bienvenue sur le dépôt source de mon site personnel (v1.0.0).
-Ce projet sépare mon identité personnelle et créative de mon activité freelance historique. Il sert de carte de visite numérique et de terrain d'expérimentation.
+Bienvenue sur le dépôt source de mon site personnel (v1.1.0).
+Ce projet héberge mon identité numérique, séparant mon parcours professionnel de mes expérimentations créatives.
 
 🌐 Live URL : hgnn.io
 
-✨ Fonctionnalités
+✨ Structure du Site
 
-Identité : Présentation CSM & Prompt AI Specialist.
+1. [Home] index.html
 
-Stack Viz : Slider infini avec liens SEO-friendly vers les outils (OpenAI, n8n, Make...).
+La façade "Corporate & Humaine".
 
-Timeline : Parcours professionnel (Volubile, Orange, Entrepreneur).
+Identité : CSM & Prompt AI Specialist @ Volubile.
 
-Zone "Galaxy" : Section créative en CSS pur (sans images lourdes).
+Stack Viz : Slider infini des outils (OpenAI, n8n, Make...).
 
-Easter Egg : Un petit secret pour les fans de MPG (tapez mpg au clavier).
+Timeline : Parcours (Volubile, Orange, Entrepreneur).
 
-Performance : Score Lighthouse optimisé (Vanilla JS + Tailwind CDN).
+Easter Egg : Tapez mpg au clavier... ⚽️
+
+2. [Lab] galaxy.html
+
+Le laboratoire créatif "Underground".
+
+Concept : Une galerie immersive "Mr Robot" / Cyberpunk.
+
+Contenu : Showcase de prompts complexes (Midjourney, Sora, Veo).
+
+Tech : Grille Masonry responsive en CSS pur.
 
 🛠️ Stack Technique
 
-Pas de framework lourd (React/Vue/Angular). Retour aux sources pour une performance maximale et une maintenance nulle.
+HTML5 : Sémantique et accessible.
 
-HTML5 : Structure sémantique.
+Tailwind CSS (via CDN) : Styling utilitaire rapide.
 
-Tailwind CSS (via CDN) : Styling rapide et responsive.
+Vanilla JS : Aucune dépendance lourde, performance maximale.
 
-Vanilla JS : Pour l'année dynamique et l'Easter Egg.
+Lucide Icons : Iconographie vectorielle légère.
 
-Lucide Icons : Iconographie légère.
+📂 Structure des fichiers
+
+├── assets/
+│   └── img/      # Créations IA (WebP optimisés)
+├── index.html    # Page d'accueil (Pro)
+├── galaxy.html   # Galerie expérimentale (Perso)
+├── robots.txt    # SEO Crawling rules
+├── sitemap.xml   # SEO Indexing map
+└── README.md     # Documentation
+
 
 👤 Auteur
 
 Gauthier Huguenin
 
 📍 Grenoble, France
+
+💼 CSM & Prompt AI Specialist
 
 © 2025 Gauthier Huguenin - Tous droits réservés.

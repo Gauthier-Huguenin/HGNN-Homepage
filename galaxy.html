@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5V6J8FMRM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-H5V6J8FMRM');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGNN // GALAXY_LAB</title>
+    
+    <!-- Fonts: Inter (Link) & Space Mono (Tech) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons & Tailwind -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --accent: #f72585; /* Cyberpunk Pink */
+            --term-green: #00ff41;
+            --code-bg: #0d1117; /* GitHub Dark dim */
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-mono { font-family: 'Space Mono', monospace; }
+
+        /* --- BACKGROUND --- */
+        .galaxy-bg {
+            background: radial-gradient(ellipse at top, #1B2735 0%, #050505 60%);
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -1;
+        }
+        .stars {
+            width: 1px; height: 1px;
+            background: transparent;
+            box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+            animation: animStar 100s linear infinite;
+        }
+        .stars:after {
+            content: " "; position: absolute; top: 2000px; width: 1px; height: 1px;
+            background: transparent;
+            box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+        }
+        @keyframes animStar { from { transform: translateY(0px); } to { transform: translateY(-2000px); } }
+
+        /* --- MASONRY GRID (Pinterest Style) --- */
+        .masonry-col {
+            column-count: 1;
+            column-gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .masonry-col {
+                column-count: 2; /* 2 colonnes sur tablette */
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .masonry-col {
+                column-count: 3; /* 3 colonnes sur desktop */
+            }
+        }
+
+        /* --- CARDS --- */
+        .item-card {
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: var(--code-bg);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow: hidden;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem; /* Espace vertical entre les cartes */
+            break-inside: avoid; /* Empêche de couper la carte en deux */
+            page-break-inside: avoid;
+        }
+
+        .item-card:hover {
+            border-color: rgba(255,255,255,0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            z-index: 10;
+        }
+
+        .item-media {
+            width: 100%;
+            height: auto; /* Respecte le ratio original de l'image */
+            display: block;
+            filter: grayscale(20%) contrast(105%) brightness(90%);
+            transition: filter 0.5s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .item-card:hover .item-media { filter: grayscale(0%) contrast(100%) brightness(100%); }
+
+        /* --- CODE BLOCK STYLE --- */
+        .code-block {
+            padding: 1.2rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem; /* text-xs */
+            line-height: 1.6;
+            color: #8b949e;
+            background: #0d1117;
+            border-top: 1px solid #21262d;
+        }
+        
+        .c-keyword { color: #ff7b72; } /* Pink/Red */
+        .c-string { color: #a5d6ff; } /* Blue */
+        .c-func { color: #d2a8ff; } /* Purple */
+        .c-comment { color: #8b949e; font-style: italic; opacity: 0.7; }
+        .c-tag { color: #7ee787; } /* Green */
+        .c-param { color: #79c0ff; } /* Light Blue */
+
+        /* --- GLITCH TEXT --- */
+        .glitch {
+            position: relative;
+            color: white;
+            font-weight: bold;
+        }
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        }
+        .glitch::before { left: 2px; text-shadow: -1px 0 #ff00c1; clip: rect(44px, 450px, 56px, 0); animation: glitch-anim 5s infinite linear alternate-reverse; }
+        .glitch::after { left: -2px; text-shadow: -1px 0 #00fff9; clip: rect(44px, 450px, 56px, 0); animation: glitch-anim2 5s infinite linear alternate-reverse; }
+        
+        @keyframes glitch-anim {
+            0% { clip: rect(31px, 9999px, 94px, 0); }
+            5% { clip: rect(70px, 9999px, 11px, 0); }
+            100% { clip: rect(96px, 9999px, 86px, 0); }
+        }
+        @keyframes glitch-anim2 {
+            0% { clip: rect(25px, 9999px, 72px, 0); }
+            5% { clip: rect(55px, 9999px, 3px, 0); }
+            100% { clip: rect(10px, 9999px, 59px, 0); }
+        }
+
+    </style>
+</head>
+<body class="antialiased selection:bg-pink-500 selection:text-white">
+
+    <!-- BACKGROUND -->
+    <div class="galaxy-bg"><div class="stars"></div></div>
+
+    <!-- HEADER / NAV -->
+    <nav class="fixed w-full z-50 top-0 px-6 py-4 flex justify-between items-center mix-blend-difference text-white">
+        <a href="index.html" class="flex items-center gap-3 group opacity-70 hover:opacity-100 transition">
+            <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition"></i>
+            <span class="font-mono text-sm tracking-widest">BACK_TO_REALITY</span>
+        </a>
+        <div class="font-mono text-xs text-green-400 animate-pulse">● SYSTEM_ONLINE</div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center">
+        <div class="inline-block px-3 py-1 border border-white/20 rounded-full bg-white/5 text-slate-400 text-xs font-mono mb-6">
+            // EXPERIMENTAL_ZONE
+        </div>
+        <h1 class="text-5xl md:text-8xl font-bold mb-6 tracking-tighter text-white glitch uppercase" data-text="Le GOAT se voit">
+            Le GOAT se voit
+        </h1>
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+            Explorations visuelles générées par 
+            <a href="https://www.midjourney.com/" target="_blank" class="text-white font-mono hover:text-pink-500 transition border-b border-white/20 hover:border-pink-500">Midjourney</a> 
+            & 
+            <a href="https://openai.com/sora" target="_blank" class="text-white font-mono hover:text-purple-500 transition border-b border-white/20 hover:border-purple-500">Sora</a>.
+            <br><span class="text-xs font-mono text-slate-600 mt-2 block">Prompt Engineering // Parameter Tuning // Chaos Control</span>
+        </p>
+    </header>
+
+    <!-- GALLERY (MASONRY LAYOUT) -->
+    <main class="px-6 pb-32 max-w-7xl mx-auto">
+        <div class="masonry-col">
+            
+            <!-- 1. ORTHODOX WOMAN -->
+            <div class="item-card group">
+                <img src="assets/img/orthodox-woman.webp" alt="Orthodox Woman" class="item-media">
+                <div class="code-block">
+                    <div class="mb-2 flex justify-between">
+                        <span class="c-comment">// SACRED_VISION</span>
+                        <span class="text-[10px] border border-white/10 px-1 rounded text-slate-500">Midjourney</span>
+                    </div>
+                    <div class="mt-4 border-t border-white/5 pt-3">
+                        <span class="c-keyword">prompt</span>: <span class="c-string">"Close-up portrait of Eastern European woman, divine light in black void. Towering golden kokoshnik, orthodox symbols, heavy chains, trance-like expression. Maximalist sacred editorial style."</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. FLORAL GIRL -->
+            <div class="item-card group">
+                <img src="assets/img/floral-girl.webp" alt="Floral Glass Headdress" class="item-media">
+                <div class="code-block">
+                    <div class="mb-2 flex justify-between">
+                        <span class="c-comment">// CRYSTAL_VISION</span>
+                        <span class="text-[10px] border border-white/10 px-1 rounded text-purple-500/50">Sora</span>
+                    </div>
+                    <div class="mt-2 border-t border-white/5 pt-2 text-xs">
+                        <span class="c-keyword">prompt</span>: <span class="c-string">"Ultra-detailed futuristic portrait..."</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. GREEN GOAT -->
+            <div class="item-card group border-green-500/30 shadow-[0_0_30px_rgba(0,255,65,0.1)]">
+                <img src="assets/img/green-goat.webp" alt="GOAT Grillz" class="item-media">
+                <div class="code-block" style="background: #050d07;">
+                    <div class="mb-2 flex justify-between">
+                        <span class="c-comment" style="color:#00ff41">// THE_GOAT</span>
+                        <span class="text-[10px] border border-green-500/30 px-1 rounded text-green-500">Sora</span>
+                    </div>
+                    <div class="mt-2 border-t border-green-900/30 pt-2 text-xs">
+                        <span class="c-keyword">prompt</span>: <span class="c-string">"Ultrarealistic, ski mask, GIANT grillz 'GOAT'..."</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. CROSS WOMAN -->
+            <div class="item-card group">
+                <img src="assets/img/cross-woman.webp" alt="Baroque Cross Woman" class="item-media">
+                <div class="code-block">
+                    <div class="mb-2 flex justify-between">
+                        <span class="c-comment">// BAROQUE_DIVINITY</span>
+                        <span class="text-[10px] border border-white/10 px-1 rounded text-slate-500">Midjourney</span>
+                    </div>
+                    <div class="mt-4 border-t border-white/5 pt-3">
+                        <span class="c-keyword">prompt</span>: <span class="c-string">"Hyper-realistic portrait, woman in deep black background, rich blue veil, intricate gold and crystal embellishments, baroque patterns. Ornate gold crosses, pale blue eyes."</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. AK NUN -->
+            <div class="item-card group">
+                <img src="assets/img/AKNun.webp" alt="Nun with AK47" class="item-media">
+                <div class="code-block">
+                    <div class="mb-2 flex justify-between">
+                        <span class="c-comment">// HOLY_WARFARE</span>
+                        <span class="text-[10px] border border-white/10 px-1 rounded text-slate-500">Midjourney</span>
+                    </div>
+                    <div class="mt-2 border-t border-white/5 pt-2 text-xs">
+                        <span class="c-keyword">prompt</span>: <span class="c-string">"A nun holding an AK47 machine gun. High contrast."</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. LIGHT OLD MEN -->
+            <div class="item-card group">
+                <img src="assets/img/light-old-men.webp" alt="Neon Robot Man" class="item-media">
+                <div class="code-block">
+                    <div class="mb-2 flex justify-between">
+                        <span class="c-comment">// SYNTH_PROPHET</span>
+                        <span class="text-[10px] border border-white/10 px-1 rounded text-slate-500">Midjourney</span>
+                    </div>
+                    <div class="mt-2 border-t border-white/5 pt-2 text-xs">
+                        <span class="c-keyword">prompt</span>: <span class="c-string">"Bearded robot man, neon fringes, iPhone 8 flash style."</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. BUBBLE CASTLE -->
+            <div class="item-card group">
+                <img src="assets/img/bubble-castle.webp" alt="Castle in Bubble" class="item-media">
+                <div class="code-block">
+                    <div class="mb-2 flex justify-between">
+                        <span class="c-comment">// CHRONO_DOME</span>
+                        <span class="text-[10px] border border-white/10 px-1 rounded text-purple-500/50">Sora</span>
+                    </div>
+                    <div class="mt-4 border-t border-white/5 pt-3">
+                        <span class="c-keyword">prompt</span>: <span class="c-string">"Grand classical French château enclosed within a giant transparent dome. Four seasons simultaneously: winter salon, autumn library, spring ballroom, summer dining room. Glowing dome, soft gradients."</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center pb-12 opacity-50 hover:opacity-100 transition">
+        <p class="font-mono text-[10px] text-slate-500">
+            END OF TRANSMISSION // 
+            <a href="index.html" class="hover:text-white transition">RETURN_HOME</a>
+        </p>
+        <p class="font-mono text-[10px] text-slate-600 mt-2">
+            © <span id="year"></span> Gauthier Huguenin
+        </p>
+    </footer>
+
+    <script>
+        // Init Icons
+        lucide.createIcons();
+        // Dynamic Year
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+</body>
+</html>
