@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
+    <!-- PAGE PURPOSE: Personal branding & SEO for the name "Gauthier Huguenin" -->
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5V6J8FMRM"></script>
     <script>
@@ -14,14 +16,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & Identity -->
-    <title>Gauthier Huguenin | CSM & Prompt AI Specialist - Grenoble</title>
-    <meta name="description" content="Profil de Gauthier Huguenin. Customer Success Manager & Prompt AI Specialist. Expert IA, Automatisation (n8n, Make) et Fan de Radio Meuh.">
+    <title>Gauthier Huguenin | IA, Automatisation, CSM & Prompt Engineering – Site Officiel</title>
+    <meta name="description" content="Travaux et expérimentations IA de Gauthier Huguenin. Customer Success Manager, IA Specialist, automatisation n8n/Make et expert en prompt engineering.">
     <meta name="author" content="Gauthier Huguenin">
-    <meta name="keywords" content="Gauthier Huguenin, IA, CSM, Prompt Engineering, Grenoble, Tacos, Automatisation, Volubile, MPG">
+    <meta name="keywords" content="Gauthier Huguenin, IA, CSM, Prompt Engineering, Grenoble, Tacos, Automatisation, Volubile, MPG, n8n, Make">
     <meta name="robots" content="index, follow">
     
+    <!-- Google Identity & SERP -->
+    <meta name="application-name" content="Gauthier Huguenin">
+    <meta name="apple-mobile-web-app-title" content="Gauthier Huguenin">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hgnn.io/">
+    <meta property="og:title" content="Gauthier Huguenin | IA, Automatisation, CSM & Prompt Engineering – Site Officiel">
+    <meta property="og:description" content="Travaux et expérimentations IA de Gauthier Huguenin. Customer Success Manager, IA Specialist, automatisation n8n/Make et expert en prompt engineering.">
+    <meta property="og:image" content="https://hgnn.io/assets/img/green-goat.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hgnn.io/">
+    <meta property="twitter:title" content="Gauthier Huguenin | IA, Automatisation, CSM & Prompt Engineering – Site Officiel">
+    <meta property="twitter:description" content="Travaux et expérimentations IA de Gauthier Huguenin. Customer Success Manager, IA Specialist, automatisation n8n/Make et expert en prompt engineering.">
+    <meta property="twitter:image" content="https://hgnn.io/assets/img/green-goat.webp">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Gauthier Huguenin",
+      "givenName": "Gauthier",
+      "familyName": "Huguenin",
+      "jobTitle": "Customer Success Manager & IA Specialist",
+      "email": "mailto:gauthier@hgnn.io",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Volubile.ai"
+      },
+      "url": "https://hgnn.io/",
+      "sameAs": [
+        "https://www.linkedin.com/in/gauthierhuguenin/",
+        "https://github.com/Gauthier-Huguenin",
+        "https://www.volubile.ai/"
+      ]
+    }
+    </script>
+
     <!-- Dynamic Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍🚀</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍🚀</text></svg>">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -69,12 +112,28 @@
             overflow: hidden;
             position: relative;
         }
+        
+        /* STARS ANIMATION SYSTEM */
+        @keyframes animStar {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-2000px); }
+        }
+
+        /* Layer 1: Small stars, slow */
         .stars {
             width: 1px;
             height: 1px;
             background: transparent;
-            box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
-            animation: animStar 50s linear infinite;
+            box-shadow: 
+                174px 504px #FFF, 842px 1204px #FFF, 32px 100px #FFF, 1923px 842px #FFF, 402px 1823px #FFF,
+                582px 192px #FFF, 1201px 1654px #FFF, 943px 234px #FFF, 150px 1402px #FFF, 1842px 302px #FFF,
+                654px 920px #FFF, 1102px 1740px #FFF, 50px 500px #FFF, 1500px 800px #FFF, 300px 1200px #FFF,
+                800px 1600px #FFF, 100px 1900px #FFF, 1900px 100px #FFF, 1300px 400px #FFF, 700px 700px #FFF,
+                250px 1100px #FFF, 1600px 1500px #FFF, 450px 350px #FFF, 950px 1350px #FFF, 1450px 50px #FFF,
+                550px 950px #FFF, 1050px 1850px #FFF, 200px 250px #FFF, 1750px 650px #FFF, 350px 1550px #FFF,
+                850px 1250px #FFF, 1350px 550px #FFF, 150px 850px #FFF, 1850px 1750px #FFF, 600px 150px #FFF,
+                1150px 1050px #FFF, 75px 1650px #FFF, 1650px 450px #FFF, 525px 1450px #FFF, 1250px 750px #FFF;
+            animation: animStar 100s linear infinite;
         }
         .stars:after {
             content: " ";
@@ -83,11 +142,63 @@
             width: 1px;
             height: 1px;
             background: transparent;
-            box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+            box-shadow: 
+                174px 504px #FFF, 842px 1204px #FFF, 32px 100px #FFF, 1923px 842px #FFF, 402px 1823px #FFF,
+                582px 192px #FFF, 1201px 1654px #FFF, 943px 234px #FFF, 150px 1402px #FFF, 1842px 302px #FFF,
+                654px 920px #FFF, 1102px 1740px #FFF, 50px 500px #FFF, 1500px 800px #FFF, 300px 1200px #FFF,
+                800px 1600px #FFF, 100px 1900px #FFF, 1900px 100px #FFF, 1300px 400px #FFF, 700px 700px #FFF,
+                250px 1100px #FFF, 1600px 1500px #FFF, 450px 350px #FFF, 950px 1350px #FFF, 1450px 50px #FFF,
+                550px 950px #FFF, 1050px 1850px #FFF, 200px 250px #FFF, 1750px 650px #FFF, 350px 1550px #FFF,
+                850px 1250px #FFF, 1350px 550px #FFF, 150px 850px #FFF, 1850px 1750px #FFF, 600px 150px #FFF,
+                1150px 1050px #FFF, 75px 1650px #FFF, 1650px 450px #FFF, 525px 1450px #FFF, 1250px 750px #FFF;
         }
-        @keyframes animStar {
-            from { transform: translateY(0px); }
-            to { transform: translateY(-2000px); }
+
+        /* Layer 2: Medium stars, medium speed */
+        .stars2 {
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow: 
+                1200px 200px #FFF, 400px 1400px #FFF, 1800px 600px #FFF, 200px 1000px #FFF, 1600px 1800px #FFF,
+                600px 400px #FFF, 1400px 1200px #FFF, 800px 1600px #FFF, 100px 800px #FFF, 1900px 150px #FFF,
+                500px 900px #FFF, 1300px 1700px #FFF, 900px 500px #FFF, 150px 1500px #FFF, 1700px 300px #FFF,
+                300px 1300px #FFF, 1100px 700px #FFF, 700px 1900px #FFF, 1500px 1100px #FFF, 450px 150px #FFF;
+            animation: animStar 150s linear infinite;
+        }
+        .stars2:after {
+            content: " ";
+            position: absolute;
+            top: 2000px;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow: 
+                1200px 200px #FFF, 400px 1400px #FFF, 1800px 600px #FFF, 200px 1000px #FFF, 1600px 1800px #FFF,
+                600px 400px #FFF, 1400px 1200px #FFF, 800px 1600px #FFF, 100px 800px #FFF, 1900px 150px #FFF,
+                500px 900px #FFF, 1300px 1700px #FFF, 900px 500px #FFF, 150px 1500px #FFF, 1700px 300px #FFF,
+                300px 1300px #FFF, 1100px 700px #FFF, 700px 1900px #FFF, 1500px 1100px #FFF, 450px 150px #FFF;
+        }
+
+        /* Layer 3: Big stars, faster (parallax effect) */
+        .stars3 {
+            width: 3px;
+            height: 3px;
+            background: transparent;
+            box-shadow: 
+                900px 100px #FFF, 1500px 1600px #FFF, 200px 800px #FFF, 1800px 1200px #FFF, 500px 400px #FFF,
+                1100px 1400px #FFF, 600px 1800px #FFF, 1300px 200px #FFF, 300px 1000px #FFF, 1700px 600px #FFF;
+            animation: animStar 200s linear infinite;
+        }
+        .stars3:after {
+            content: " ";
+            position: absolute;
+            top: 2000px;
+            width: 3px;
+            height: 3px;
+            background: transparent;
+            box-shadow: 
+                900px 100px #FFF, 1500px 1600px #FFF, 200px 800px #FFF, 1800px 1200px #FFF, 500px 400px #FFF,
+                1100px 1400px #FFF, 600px 1800px #FFF, 1300px 200px #FFF, 300px 1000px #FFF, 1700px 600px #FFF;
         }
         
         .glass-panel {
@@ -155,7 +266,7 @@
                     </a>
                     <!-- GALAXY BUTTON IN HEADER -->
                     <a href="galaxy.html" class="hidden sm:flex items-center gap-1 px-3 py-1 rounded-md bg-black text-white text-[10px] font-bold uppercase tracking-wider hover:bg-slate-800 transition-all duration-300 shadow-md transform hover:-translate-y-0.5 group/galaxy">
-                        <i data-lucide="sparkles" class="w-3 h-3 text-purple-400 group-hover/galaxy:animate-spin"></i>
+                        <i data-lucide="sparkles" role="img" class="w-3 h-3 text-purple-400 group-hover/galaxy:animate-spin"></i>
                         GALAXY
                     </a>
                 </div>
@@ -167,51 +278,54 @@
             <!-- Right: Icons -->
             <div class="flex items-center gap-4">
                 <!-- Mini Mail Button -->
-                <a href="mailto:gauthier@hgnn.io" class="text-slate-400 hover:text-purple-600 transition" title="M'envoyer un email">
-                    <i data-lucide="mail" class="w-5 h-5"></i>
+                <a href="mailto:gauthier@hgnn.io" aria-label="Email Gauthier Huguenin" class="text-slate-400 hover:text-purple-600 transition" title="M'envoyer un email">
+                    <i data-lucide="mail" role="img" class="w-5 h-5"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/gauthierhuguenin/" target="_blank" class="text-slate-400 hover:text-[#0077b5] transition" title="LinkedIn">
-                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                <a href="https://www.linkedin.com/in/gauthierhuguenin/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Gauthier Huguenin" class="text-slate-400 hover:text-[#0077b5] transition" title="LinkedIn">
+                    <i data-lucide="linkedin" role="img" class="w-5 h-5"></i>
                 </a>
-                <a href="https://github.com/Gauthier-Huguenin" target="_blank" class="text-slate-400 hover:text-slate-900 transition" title="GitHub">
-                    <i data-lucide="github" class="w-5 h-5"></i>
+                <a href="https://github.com/Gauthier-Huguenin" target="_blank" rel="noopener noreferrer" aria-label="GitHub Gauthier Huguenin" class="text-slate-400 hover:text-slate-900 transition" title="GitHub">
+                    <i data-lucide="github" role="img" class="w-5 h-5"></i>
                 </a>
             </div>
         </div>
     </nav>
 
     <main>
+        <!-- SEO Invisible Heading -->
+        <h1 class="sr-only">Gauthier Huguenin – IA, Customer Success, Automatisation & Prompt Engineering</h1>
+
         <!-- HERO SECTION -->
         <header class="relative pt-44 pb-12 px-6 text-center max-w-4xl mx-auto fade-in-up">
             
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 text-slate-900">
+            <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 text-slate-900">
                 L'interface humaine<br>
                 <span class="text-gradient">entre le business et l'IA.</span>
-            </h1>
+            </h2>
 
             <div class="max-w-2xl mx-auto text-center mb-12 space-y-6">
                 <p class="text-lg text-slate-600 leading-relaxed font-normal">
-                    Basé à <strong>Grenoble</strong> (Capitale des Alpes et du Tacos 🌮). Je ne suis pas développeur, je suis un traducteur. Je traduis des problématiques humaines complexes en instructions machines précises pour l'Intelligence Artificielle.
+                    Je suis <strong>Gauthier Huguenin</strong>, basé à <strong>Grenoble</strong> (Capitale des 🏔️ et du 🌮). Je ne suis pas développeur, je suis un <strong>Prompt Specialist</strong>. Je traduis des problématiques humaines complexes en instructions machines précises pour l'Intelligence Artificielle.
                 </p>
             </div>
 
             <!-- ACTION BUTTONS -->
             <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
                 <!-- Email: Blanc -->
-                <a href="mailto:gauthier@hgnn.io" class="flex items-center justify-center gap-2 px-8 py-3 bg-white text-slate-900 border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 transition shadow-sm hover:shadow-md hover:-translate-y-1">
-                    <i data-lucide="mail" class="w-4 h-4"></i>
+                <a href="mailto:gauthier@hgnn.io" aria-label="Email Gauthier Huguenin" class="flex items-center justify-center gap-2 px-8 py-3 bg-white text-slate-900 border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 transition shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <i data-lucide="mail" role="img" class="w-4 h-4"></i>
                     Email
                 </a>
                 
                 <!-- LinkedIn: Bleu -->
-                <a href="https://www.linkedin.com/in/gauthierhuguenin/" target="_blank" class="flex items-center justify-center gap-2 px-8 py-3 bg-[#0077b5] text-white rounded-xl font-semibold hover:bg-[#006097] transition shadow-lg hover:shadow-[#0077b5]/30 hover:-translate-y-1">
-                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <a href="https://www.linkedin.com/in/gauthierhuguenin/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Gauthier Huguenin" class="flex items-center justify-center gap-2 px-8 py-3 bg-[#0077b5] text-white rounded-xl font-semibold hover:bg-[#006097] transition shadow-lg hover:shadow-[#0077b5]/30 hover:-translate-y-1">
+                    <i data-lucide="linkedin" role="img" class="w-4 h-4"></i>
                     LinkedIn
                 </a>
                 
                 <!-- GitHub: Noir -->
-                <a href="https://github.com/Gauthier-Huguenin" target="_blank" class="flex items-center justify-center gap-2 px-8 py-3 bg-slate-900 text-white rounded-xl font-semibold hover:bg-black transition shadow-lg hover:shadow-slate-900/30 hover:-translate-y-1">
-                    <i data-lucide="github" class="w-4 h-4"></i>
+                <a href="https://github.com/Gauthier-Huguenin" target="_blank" rel="noopener noreferrer" aria-label="GitHub Gauthier Huguenin" class="flex items-center justify-center gap-2 px-8 py-3 bg-slate-900 text-white rounded-xl font-semibold hover:bg-black transition shadow-lg hover:shadow-slate-900/30 hover:-translate-y-1">
+                    <i data-lucide="github" role="img" class="w-4 h-4"></i>
                     GitHub
                 </a>
             </div>
@@ -223,45 +337,45 @@
             <div class="relative flex overflow-x-hidden group">
                 <div class="py-2 animate-scroll whitespace-nowrap flex items-center gap-16 pl-16">
                     <!-- GEN AI TEXT -->
-                    <a href="https://openai.com/gpt-4" target="_blank" class="tool-link text-2xl font-bold text-[#10a37f]">GPT-4o</a>
-                    <a href="https://www.anthropic.com/claude" target="_blank" class="tool-link text-2xl font-bold text-[#d97757]">Claude</a>
-                    <a href="https://gemini.google.com/" target="_blank" class="tool-link text-2xl font-bold text-[#4E88D4]">Gemini</a>
+                    <a href="https://openai.com/index/gpt-4o/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#10a37f]">GPT-4o</a>
+                    <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#d97757]">Claude</a>
+                    <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#4E88D4]">Gemini</a>
                     
                     <!-- CREATIVE AI -->
-                    <a href="https://openai.com/sora" target="_blank" class="tool-link text-2xl font-bold text-[#000000]">Sora 2</a>
-                    <a href="https://www.midjourney.com/" target="_blank" class="tool-link text-2xl font-bold text-[#1C2C5E]">Midjourney</a>
+                    <a href="https://openai.com/sora" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#000000]">Sora 2</a>
+                    <a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#1C2C5E]">Midjourney</a>
                     
                     <!-- HUMOUR INSERTION -->
-                    <a href="https://www.radiomeuh.com/" target="_blank" class="tool-link text-2xl font-bold text-[#FF8C00]">Radio Meuh 🐮</a>
+                    <a href="https://www.radiomeuh.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#FF8C00]">Radio Meuh 🐮</a>
                     
-                    <a href="https://deepmind.google/technologies/veo/" target="_blank" class="tool-link text-2xl font-bold text-[#4285F4]">Veo 3</a>
-                    <span class="tool-link text-2xl font-bold text-[#FDD835]">Neo Banana Pro</span>
-                    <a href="https://elevenlabs.io/" target="_blank" class="tool-link text-2xl font-bold text-[#333333]">ElevenLabs</a>
+                    <a href="https://deepmind.google/technologies/veo/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#4285F4]">Veo 3</a>
+                    <a href="https://gemini.google/overview/image-generation/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#FDD835]">Neo Banana Pro</a>
+                    <a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#333333]">ElevenLabs</a>
                     
                     <!-- BUSINESS -->
-                    <a href="https://www.hubspot.com/" target="_blank" class="tool-link text-2xl font-bold text-[#FF7A59]">HubSpot</a>
+                    <a href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#FF7A59]">HubSpot</a>
                     
                     <!-- HUMOUR INSERTION 2 -->
-                    <a href="https://mpg.football/" target="_blank" class="tool-link text-2xl font-bold text-[#2ECC71]">MPG ⚽</a>
+                    <a href="https://mpg.football/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#2ECC71]">MPG ⚽</a>
 
-                    <a href="https://www.pipedrive.com/" target="_blank" class="tool-link text-2xl font-bold text-[#26292C]">Pipedrive</a>
-                    <a href="https://www.salesforce.com/" target="_blank" class="tool-link text-2xl font-bold text-[#00A1E0]">Salesforce</a>
+                    <a href="https://www.pipedrive.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#26292C]">Pipedrive</a>
+                    <a href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#00A1E0]">Salesforce</a>
                     
                     <!-- AUTOMATION -->
-                    <a href="https://www.activepieces.com/" target="_blank" class="tool-link text-2xl font-bold text-[#E21D48]">Activepieces</a>
-                    <a href="https://n8n.io/" target="_blank" class="tool-link text-2xl font-bold text-[#FF6B6B]">n8n</a>
-                    <a href="https://www.make.com/" target="_blank" class="tool-link text-2xl font-bold text-[#6F42C1]">Make</a>
-                    <a href="https://www.notion.so/" target="_blank" class="tool-link text-2xl font-bold text-[#000000]">Notion</a>
-                    <a href="https://support.apple.com/guide/shortcuts/welcome/ios" target="_blank" class="tool-link text-2xl font-bold text-[#2D73FF]">Shortcuts </a>
+                    <a href="https://www.activepieces.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#E21D48]">Activepieces</a>
+                    <a href="https://n8n.io/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#FF6B6B]">n8n</a>
+                    <a href="https://www.make.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#6F42C1]">Make</a>
+                    <a href="https://www.notion.so/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#000000]">Notion</a>
+                    <a href="https://support.apple.com/fr-fr/guide/shortcuts/welcome/ios" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#2D73FF]">Shortcuts </a>
 
                     <!-- DUPLICATE FOR LOOP -->
                     <span class="text-2xl font-bold text-slate-300 mx-4">•</span>
-                    <a href="https://openai.com/gpt-4" target="_blank" class="tool-link text-2xl font-bold text-[#10a37f]">GPT-4o</a>
-                    <a href="https://www.anthropic.com/claude" target="_blank" class="tool-link text-2xl font-bold text-[#d97757]">Claude</a>
-                    <a href="https://www.radiomeuh.com/" target="_blank" class="tool-link text-2xl font-bold text-[#FF8C00]">Radio Meuh 🐮</a>
-                    <a href="https://openai.com/sora" target="_blank" class="tool-link text-2xl font-bold text-[#000000]">Sora 2</a>
-                    <a href="https://www.hubspot.com/" target="_blank" class="tool-link text-2xl font-bold text-[#FF7A59]">HubSpot</a>
-                    <a href="https://n8n.io/" target="_blank" class="tool-link text-2xl font-bold text-[#FF6B6B]">n8n</a>
+                    <a href="https://openai.com/index/gpt-4o/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#10a37f]">GPT-4o</a>
+                    <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#d97757]">Claude</a>
+                    <a href="https://www.radiomeuh.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#FF8C00]">Radio Meuh 🐮</a>
+                    <a href="https://openai.com/sora" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#000000]">Sora 2</a>
+                    <a href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#FF7A59]">HubSpot</a>
+                    <a href="https://n8n.io/" target="_blank" rel="noopener noreferrer" class="tool-link text-2xl font-bold text-[#FF6B6B]">n8n</a>
                 </div>
             </div>
         </section>
@@ -269,7 +383,10 @@
         <!-- GALAXY SECTION -->
         <section class="galaxy-bg text-white py-24 relative overflow-hidden">
             <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
+            <!-- Star Layers for Depth -->
             <div class="stars absolute top-0 left-0 right-0"></div>
+            <div class="stars2 absolute top-0 left-0 right-0"></div>
+            <div class="stars3 absolute top-0 left-0 right-0"></div>
             
             <div class="max-w-5xl mx-auto px-6 relative z-10">
                 <div class="flex flex-col md:flex-row items-center gap-12">
@@ -288,7 +405,7 @@
                         <!-- PORTAL CTA -->
                         <a href="galaxy.html" class="inline-flex items-center gap-3 bg-white/10 hover:bg-purple-600/80 border border-white/20 hover:border-purple-500 text-white px-6 py-3 rounded-xl transition-all duration-300 group shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_30px_rgba(147,51,234,0.6)]">
                             <span class="font-bold tracking-wide">Explorer le Labo Galaxy</span>
-                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                            <i data-lucide="arrow-right" role="img" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                     
@@ -302,7 +419,7 @@
                             <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900 shadow-2xl">
                                 <!-- Image (Green Goat Placeholder) -->
                                 <div class="aspect-[3/4] relative">
-                                    <img src="assets/img/green-goat.webp" alt="Experimental AI Art" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-500">
+                                    <img src="assets/img/green-goat.webp" alt="Expérimentation IA générative par Gauthier Huguenin - Green Goat" width="1024" height="1536" loading="lazy" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-500">
                                     
                                     <!-- Overlay Gradient -->
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80"></div>
@@ -334,7 +451,7 @@
         <section class="max-w-4xl mx-auto px-6 py-24">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4 text-slate-900">Trajectoire Professionnelle</h2>
-                <a href="https://youtu.be/S4FvhbLhBbI?si=Iym8KLxJ4wK0wVGS" target="_blank" class="text-slate-500 hover:text-purple-600 transition duration-300 italic text-sm">
+                <a href="https://youtu.be/S4FvhbLhBbI?si=Iym8KLxJ4wK0wVGS" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-purple-600 transition duration-300 italic text-sm">
                     "Débrouillard à jamais 🎶"
                 </a>
             </div>
@@ -344,7 +461,7 @@
                 <!-- Experience 1 -->
                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                     <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-100 group-[.is-active]:bg-purple-600 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                        <i data-lucide="bot" class="w-5 h-5"></i>
+                        <i data-lucide="bot" role="img" class="w-5 h-5"></i>
                     </div>
                     
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
@@ -354,7 +471,7 @@
                         </div>
                         <p class="text-sm font-semibold text-slate-700 mb-3">@ Volubile.ai</p>
                         <p class="text-slate-600 text-sm leading-relaxed">
-                            C'est ici que la magie opère. Je ne suis pas "juste" un CSM, je suis le psychologue des Agents IA. Je comprends l'enjeu business (vendre plus, sans énerver le client) et je le traduis en prompt système.
+                            C'est ici que la magie opère. En tant que <strong>Gauthier Huguenin</strong>, je ne suis pas "juste" un CSM, je suis le psychologue des Agents IA. Je comprends l'enjeu business (vendre plus, sans énerver le client) et je le traduis en prompt système.
                         </p>
                     </div>
                 </div>
@@ -362,7 +479,7 @@
                 <!-- Experience 2 -->
                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                     <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-white text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                        <i data-lucide="briefcase" class="w-5 h-5"></i>
+                        <i data-lucide="briefcase" role="img" class="w-5 h-5"></i>
                     </div>
                     
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
@@ -380,7 +497,7 @@
                 <!-- Experience 3 -->
                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                     <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-white text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                        <i data-lucide="beer" class="w-5 h-5"></i>
+                        <i data-lucide="beer" role="img" class="w-5 h-5"></i>
                     </div>
                     
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
@@ -404,12 +521,12 @@
                 <div class="flex flex-col sm:flex-row justify-center gap-6 mb-8 text-sm font-medium">
                     <a href="mailto:gauthier@hgnn.io" class="hover:text-purple-600 transition">Mail</a>
                     <span class="text-slate-300 hidden sm:inline">|</span>
-                    <a href="https://www.linkedin.com/in/gauthierhuguenin/" target="_blank" class="hover:text-purple-600 transition">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/gauthierhuguenin/" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition">LinkedIn</a>
                     <span class="text-slate-300 hidden sm:inline">|</span>
-                    <a href="https://github.com/Gauthier-Huguenin" target="_blank" class="hover:text-purple-600 transition">GitHub</a>
+                    <a href="https://github.com/Gauthier-Huguenin" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition">GitHub</a>
                 </div>
                 <p class="text-slate-400 text-xs">
-                    © <span id="year"></span> Gauthier H. - Fait avec de l'IA, beaucoup de café et <b>Polo & Pan</b> dans les oreilles 🎧
+                    © <span id="year"></span> Gauthier Huguenin - Fait avec de l'IA, beaucoup de café et <b>Polo & Pan</b> dans les oreilles 🎧
                 </p>
             </div>
         </footer>
